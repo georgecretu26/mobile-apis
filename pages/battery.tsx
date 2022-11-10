@@ -1,5 +1,5 @@
 import Link from "next/link";
-import useBatteryStatus from "./hooks/use-battery";
+import useBatteryStatus from "../hooks/use-battery";
 
 const Battery = () => {
   const battery = useBatteryStatus();

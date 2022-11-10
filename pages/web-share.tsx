@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { useEffect } from "react";
-import useWebShare from "./hooks/use-web-share";
+import useWebShare from "../hooks/use-web-share";
 
 const WebShare = () => {
   const { isSupported, share } = useWebShare();

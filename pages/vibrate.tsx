@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { useEffect } from "react";
-import useVibration from "./hooks/use-vibration";
+import useVibration from "../hooks/use-vibration";
 
 const Vibrate = () => {
   const vibrate = useVibration();

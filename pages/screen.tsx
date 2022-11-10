@@ -1,9 +1,9 @@
 import Link from "next/link";
 import { useEffect } from "react";
-import useScreenOrientation from "./hooks/use-screen-orientation";
+import useScreenOrientation from "../hooks/use-screen-orientation";
 
 const Screen = () => {
-  const orientation = useScreenOrientation();
+  const { orientation, isSupported } = useScreenOrientation();
 
   useEffect(() => {
     console.log(orientation);
@@ -13,7 +13,7 @@ const Screen = () => {
     <>
       <Link href="/">Go Home</Link>
       <>
-        {!window?.screen?.orientation && <p>API not supported</p>}
+        {!isSupported && <p>API not supported</p>}
         <p>
           Screen orientation: <span>{orientation?.type}</span>
         </p>
