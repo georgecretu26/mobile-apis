@@ -1,5 +1,7 @@
+import Documentation from "../components/Documentation";
 import GoBackButton from "../components/GoBackButton";
 import NotSupported from "../components/IsSupported";
+import TestedDevice from "../components/TestedDevice";
 
 import useWebShare from "../hooks/use-web-share";
 
@@ -16,7 +18,22 @@ const WebShare = () => {
 
   if (!isSupported) return <NotSupported />;
 
-  return <button onClick={handleShare}>Share</button>;
+  return (
+    <>
+      <GoBackButton />
+      <button onClick={handleShare}>Share</button>
+      <Documentation
+        links={[
+          "https://developer.mozilla.org/en-US/docs/Web/API/Navigator/share",
+        ]}
+      />
+      <TestedDevice
+        environments={[
+          { platform: "Apple", device: "iPhone", browser: "Safari" },
+        ]}
+      />
+    </>
+  );
 };
 
 export default WebShare;

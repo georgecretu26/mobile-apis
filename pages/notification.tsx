@@ -1,5 +1,7 @@
+import Documentation from "../components/Documentation";
 import GoBackButton from "../components/GoBackButton";
 import NotSupported from "../components/IsSupported";
+import TestedDevice from "../components/TestedDevice";
 import useNotification from "../hooks/use-notification";
 
 const notificationObj = {
@@ -26,6 +28,16 @@ const Notification = () => {
     <>
       <GoBackButton />
       <button onClick={handleNotification}>Notify</button>
+      <Documentation
+        links={[
+          "https://developer.mozilla.org/en-US/docs/Web/API/Notifications_API",
+        ]}
+      />
+      <TestedDevice
+        environments={[
+          { platform: "Apple", device: "Desktop", browser: "Safari" },
+        ]}
+      />
     </>
   );
 };

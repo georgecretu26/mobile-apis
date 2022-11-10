@@ -1,4 +1,6 @@
+import Documentation from "../components/Documentation";
 import GoBackButton from "../components/GoBackButton";
+import TestedDevice from "../components/TestedDevice";
 import useBatteryStatus from "../hooks/use-battery";
 
 const Battery = () => {
@@ -20,6 +22,20 @@ const Battery = () => {
           <p>Discharging time: {battery.dischargingTime} sec</p>
         </>
       )}
+      <Documentation
+        links={[
+          "https://developer.mozilla.org/en-US/docs/Web/API/Battery_Status_API",
+        ]}
+      />
+      <TestedDevice
+        environments={[
+          {
+            platform: "Apple",
+            device: "MacBook, iPhone",
+            browser: "Chrome, Safari",
+          },
+        ]}
+      />
     </div>
   );
 };

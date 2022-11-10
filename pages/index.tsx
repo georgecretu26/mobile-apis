@@ -35,6 +35,11 @@ export default function Home() {
             Speech api
           </Link>
         </li>
+        <li>
+          <Link className="link" href="/special-mention">
+            Special Mention
+          </Link>
+        </li>
       </ul>
     </div>
   );
