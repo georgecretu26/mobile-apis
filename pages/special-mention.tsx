@@ -37,6 +37,10 @@ const SpecialMention = () => {
           "https://developer.mozilla.org/en-US/docs/Web/API/Detecting_device_orientation",
         ]}
       />
+      <Documentation
+        title="Sensor API"
+        links={["https://developer.mozilla.org/en-US/docs/Web/API/Sensor_APIs"]}
+      />
     </>
   );
 };
