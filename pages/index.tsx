@@ -17,6 +17,9 @@ export default function Home() {
         <li>
           <Link href="/web-share">Web Share api</Link>
         </li>
+        <li>
+          <Link href="/notification">Notification api</Link>
+        </li>
       </ul>
     </div>
   );
