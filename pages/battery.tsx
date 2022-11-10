@@ -10,7 +10,7 @@ const Battery = () => {
     <div>
       <GoBackButton />
       <h1>Battery</h1>
-      <p>Battery level: {battery.level}</p>
+      <p>Battery level: {battery.level * 100} %</p>
       {battery.charging ? (
         <>
           <p>Battery charging: Yes</p>
