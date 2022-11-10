@@ -1,13 +1,15 @@
-import Link from "next/link";
-import { useEffect } from "react";
+import GoBackButton from "../components/GoBackButton";
+import NotSupported from "../components/IsSupported";
 import useVibration from "../hooks/use-vibration";
 
 const Vibrate = () => {
-  const vibrate = useVibration();
+  const { vibrate, isSupported } = useVibration();
+
+  if (!isSupported) return <NotSupported />;
 
   return (
     <div>
-      <Link href="/">Go Home</Link>
+      <GoBackButton />
       <h1>Vibration</h1>
       <button onClick={() => vibrate(1000)}>Vibrate 1 sec</button>
       <button onClick={() => vibrate([1000, 500, 1000])}>

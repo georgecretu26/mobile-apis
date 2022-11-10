@@ -1,4 +1,4 @@
-import Link from "next/link";
+import GoBackButton from "../components/GoBackButton";
 import useBatteryStatus from "../hooks/use-battery";
 
 const Battery = () => {
@@ -6,7 +6,7 @@ const Battery = () => {
 
   return (
     <div>
-      <Link href="/">Go Home</Link>
+      <GoBackButton />
       <h1>Battery</h1>
       <p>Battery level: {battery.level}</p>
       {battery.charging ? (

@@ -1,5 +1,6 @@
-import Link from "next/link";
-import { useEffect } from "react";
+import GoBackButton from "../components/GoBackButton";
+import NotSupported from "../components/IsSupported";
+
 import useWebShare from "../hooks/use-web-share";
 
 const WebShare = () => {
@@ -13,16 +14,9 @@ const WebShare = () => {
     });
   };
 
-  return (
-    <>
-      <Link href="/">Go Home</Link>
-      {!isSupported ? (
-        <p>API not supported</p>
-      ) : (
-        <button onClick={handleShare}>Share</button>
-      )}
-    </>
-  );
+  if (!isSupported) return <NotSupported />;
+
+  return <button onClick={handleShare}>Share</button>;
 };
 
 export default WebShare;

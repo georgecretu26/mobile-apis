@@ -1,4 +1,5 @@
-import Link from "next/link";
+import GoBackButton from "../components/GoBackButton";
+import NotSupported from "../components/IsSupported";
 import useNotification from "../hooks/use-notification";
 
 const notificationObj = {
@@ -19,10 +20,11 @@ const Notification = () => {
     fireNotification();
   };
 
+  if (!isSupported) return <NotSupported />;
+
   return (
     <>
-      <Link href="/">Go Home</Link>
-      {!isSupported && <p>API not supported</p>}
+      <GoBackButton />
       <button onClick={handleNotification}>Notify</button>
     </>
   );
