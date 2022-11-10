@@ -7,16 +7,11 @@ const WebShare = () => {
 
   const handleShare = () => {
     share({
-      title: "Web Share API",
-      text: "Check out this cool Web Share API",
-      url: "https://web.dev/web-share/",
+      title: "Achievement unlocked",
+      text: "Won 1 bet, check my profile",
+      url: "https://google.com",
     });
   };
-
-  useEffect(() => {
-    console.log(isSupported);
-    console.log(navigator);
-  }, [isSupported]);
 
   return (
     <>
