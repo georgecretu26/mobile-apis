@@ -15,7 +15,8 @@ const useBatteryStatus = () => {
   };
 
   useEffect(() => {
-    const battery = navigator.getBattery().then((battery: any) => {
+    const nav: any = navigator;
+    const battery = nav.getBattery().then((battery: any) => {
       battery.addEventListener("levelchange", handleChange);
       battery.addEventListener("chargingchange", handleChange);
       handleChange({ target: battery });
