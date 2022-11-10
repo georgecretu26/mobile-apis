@@ -29,7 +29,7 @@ const WebShare = () => {
       />
       <TestedDevice
         environments={[
-          { platform: "Apple", device: "iPhone", browser: "Safari" },
+          { platform: "Apple", device: "MacBook, iPhone", browser: "Safari" },
         ]}
       />
     </>
