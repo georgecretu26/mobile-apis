@@ -5,15 +5,6 @@ import useVibration from "../hooks/use-vibration";
 const Vibrate = () => {
   const vibrate = useVibration();
 
-  useEffect(() => {
-    vibrate(1000);
-  }, []);
-
-  useEffect(() => {
-    console.log(window.navigator);
-    console.log(window.navigator.vibrate);
-  }, []);
-
   return (
     <div>
       <Link href="/">Go Home</Link>
